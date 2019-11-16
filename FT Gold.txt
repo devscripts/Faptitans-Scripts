@@ -1,0 +1,11 @@
+var request=new XMLHttpRequest;
+
+request.open('POST', 'api/', false);
+
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+request.setRequestHeader('X-CSRFToken', document.cookie.split('csrftoken=')[1].split(';')[0]);
+
+request.send('data={"method":"battle.monsterKilled","args":{"gameTime":0,"clicks":{"__dec__":0,"val":"10e69420"},"reward":{"res":{"gold":{"__dec__":0,"val":"10e69420"}}}},"uniqueSid":"' + uniqueSid + '"}');
